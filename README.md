@@ -9,7 +9,7 @@
 ## Instalasi
 
 1. Siapkan VPS / VM (Bisa dari Azure, AWS, GCP, Hetzner, Hostinger, dan sejenisnya) dan Domain (pointing ke IP VM)
-2. Connect ke server dengan menggunakan SSH (VM menggunakan Azure dan OS Ubuntu)
+2. Connect ke server  (dalam case ini VM menggunakan Azure dan OS Ubuntu, dan SSH)
 ```
 ssh kdjkroot@20.78.34.223
 ```
