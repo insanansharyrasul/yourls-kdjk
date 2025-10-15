@@ -4,9 +4,7 @@
 
 ## Deskripsi Aplikasi
 
-YOURLS adalah kumpulan skrip PHP yang kuat yang memungkinkan Anda untuk mengelola Pemendek URL Sendiri di server Anda. 
-
-Dengan YOURLS, Anda memiliki kendali penuh atas tautan Anda, statistik terperinci, dukungan plugin, dan fitur lainnya, semuanya dikemas dalam paket gratis dan sumber terbuka.
+YOURLS adalah kumpulan skrip PHP yang memungkinkan untuk mengelola URL Shortener yang bersifat *self-hosted*. Dengan YOURLS, Anda memiliki kendali penuh atas tautan Anda, statistik terperinci, dukungan plugin, dan fitur lainnya, semuanya dikemas dalam paket gratis dan open source.
 
 ## Instalasi
 
@@ -202,9 +200,7 @@ YOURLS punya REST API, contohnya:
 curl -d "url=https://contoh.com&keyword=mykeyword&format=simple&signature=APIKEY&action=shorturl" https://linkku.id/yourls-api.php
 ```
 
-Cocok untuk integrasi dengan skrip, bot Telegram, form, atau CMS.
-
-Gunakan signature (API key) untuk autentikasi agar tidak sembarang orang bisa membuat shortlink.
+Cocok untuk integrasi dengan skrip, bot Telegram, form, atau CMS. Gunakan signature (API key) untuk autentikasi agar tidak sembarang orang bisa membuat shortlink.
 
 3. Kelola link dengan rapi
 
