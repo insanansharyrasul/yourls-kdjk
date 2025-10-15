@@ -152,7 +152,7 @@ maka file conf NGINX yang berasosiasi dengan domain akan berubah otomatis untuk 
 ```
 https://akupendekkin.my.id/admin/install #ikuti installasi
 
-https://example.com/admin/index.php #login dengan username dan password admin
+https://akupendekkin.my.id/admin/index.php #login dengan username dan password admin
 ```
 
 ## Cara Pemakaian
