@@ -1,10 +1,12 @@
-# Project Hosting Yourls [Kelompok /Paralel 1]
+# Project Hosting YOURLS [Kelompok /Paralel 1]
 
 # Yourls "The de facto standard self-hosted URL shortener"
 
 ## Deskripsi Aplikasi
 
-[Tulis]
+YOURLS adalah kumpulan skrip PHP yang kuat yang memungkinkan Anda untuk mengelola Pemendek URL Sendiri di server Anda. 
+
+Dengan YOURLS, Anda memiliki kendali penuh atas tautan Anda, statistik terperinci, dukungan plugin, dan fitur lainnya, semuanya dikemas dalam paket gratis dan sumber terbuka.
 
 ## Instalasi
 
@@ -156,28 +158,59 @@ https://example.com/admin/index.php #login dengan username dan password admin
 ## Cara Pemakaian
 
 1. Akses Halaman Web  
-   [Instruksi akses aplikasi]
 
-2. Proses Setup Awal  
-   [Instruksi setup]
+Kunjungi https://akupendekkin.my.id/admin/ 
 
-3. Login Sebagai Admin  
-   [Instruksi login]
+Masukkan password dan username yang sudah ditentukan saat instalasi untuk menggunakannya
 
-4. Mengunggah Data / Konten  
-   [Instruksi upload / penggunaan fitur]
+![](assets/ss1.png)
 
-5. Manajemen Konten  
-   [Instruksi manajemen galeri/konten]
+2. Membuat Link Pendek
+
+Setelah login, akan tampilan seperti pada gambar. Cukup masukkan link yang ingin dipendekkan ke dalam "**Enter the URL**" dan ubah menjadi link yang bebas pada bagian **Custom Short URL** setelah anda yakin, baru klik **Shorten The URL**.
+
+![](assets/ss2.png)
+
+3. Mengunjungi Link Pendek
+
+Setelah link berhasil dibuat, link akan bisa langsung dikunjungi dengan format yang ada pada bagian **Short URL**. Cukup kunjungi 
+
+```
+https://akupendekkin.my.id/{short_url_anda}
+```
+
+Untuk mengunjungi link nya. YOURLS akan langsung *redirect* ke address yang sebenarnya.
 
 **Tips Penggunaaan**:
 
-1. [Tips 1]
-2. [Tips 2]
-3. [Tips 3]
-4. [Tips 4]
-5. [Tips 5]
-6. [Tips 6]
+1. Manfaatkan plugin
+
+Banyak plugin berguna untuk menambah fungsi YOURLS, misalnya:
+
+- Plugin analitik lebih mendetail
+- Plugin anti-spam
+- Plugin untuk auto-hash URL
+
+Simpan plugin hanya dari sumber tepercaya (resmi atau GitHub YOURLS).
+
+Cek plugin resmi: https://yourls.org/plugins
+
+2. Gunakan API untuk otomatisasi
+
+YOURLS punya REST API, contohnya:
+```
+curl -d "url=https://contoh.com&keyword=mykeyword&format=simple&signature=APIKEY&action=shorturl" https://linkku.id/yourls-api.php
+```
+
+Cocok untuk integrasi dengan skrip, bot Telegram, form, atau CMS.
+
+Gunakan signature (API key) untuk autentikasi agar tidak sembarang orang bisa membuat shortlink.
+
+3. Kelola link dengan rapi
+
+- Gunakan format penamaan keyword yang konsisten (misalnya event-2025 atau promo-okt25).
+- Hapus link rusak atau tidak aktif secara berkala.
+- Gunakan kategori/tags lewat plugin jika butuh manajemen lebih lanjut.
 
 ## Pembahasan
 
