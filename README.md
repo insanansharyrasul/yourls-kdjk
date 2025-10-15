@@ -2,6 +2,8 @@
 
 # Yourls "The de facto standard self-hosted URL shortener"
 
+![](assets/splash.png)
+
 ## Deskripsi Aplikasi
 
 YOURLS adalah kumpulan skrip PHP yang memungkinkan untuk mengelola URL Shortener yang bersifat *self-hosted*. Dengan YOURLS, Anda memiliki kendali penuh atas tautan Anda, statistik terperinci, dukungan plugin, dan fitur lainnya, semuanya dikemas dalam paket gratis dan open source.
