@@ -327,7 +327,7 @@ Dalam penerapan di lingkungan enterprise, hybrid approach bisa menjadi pilihan y
 
 1. **YOURLS Official Documentation** - https://yourls.org/
 2. **YOURLS GitHub Repository** - https://github.com/YOURLS/YOURLS
-3. **YOURLS Plugin Directory** - https://yourls.org/plugins
+3. **YOURLS Plugin Directory** - https://yourls.org/docs/development/plugins
 4. **Bitly API Documentation** - https://dev.bitly.com/
 5. **TinyURL** - https://tinyurl.com/
 6. **IPB.Link** - https://ipb.link/
