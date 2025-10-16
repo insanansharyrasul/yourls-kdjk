@@ -1,12 +1,41 @@
-# Project Hosting YOURLS [Kelompok /Paralel 1]
+# Project Hosting YOURLS [Kelompok 4/Paralel 1]
 
-# Yourls "The de facto standard self-hosted URL shortener"
+<p align="center">
+  <img src="https://yourls.org/images/yourls-logo.svg" alt="YOURLS Logo" width="600">
+</p>
 
-![](assets/splash.png)
+<h1 align="center">YOURLS - Your Own URL Shortener</h1>
+<p align="center" style="font-size: 18px;"><b><i>The de facto standard self-hosted URL shortener</i></b></p>
+
+<div align="center">
+
+| [Deskripsi](#deskripsi-aplikasi) | [Instalasi](#instalasi) | [Cara Pemakaian](#cara-pemakaian) | [Kustomisasi dan Plugin](#kustomisasi-dan-plugin) | [Pembahasan](#pembahasan) | [Referensi](#referensi) |
+|----------------------------------|-------------------------|-----------------------------------|--------------------------------|---------------------------|-------------------------|
+
+</div>
+
+---
 
 ## Deskripsi Aplikasi
 
-YOURLS adalah kumpulan skrip PHP yang memungkinkan untuk mengelola URL Shortener yang bersifat *self-hosted*. Dengan YOURLS, Anda memiliki kendali penuh atas tautan Anda, statistik terperinci, dukungan plugin, dan fitur lainnya, semuanya dikemas dalam paket gratis dan open source.
+**YOURLS** (*Your Own URL Shortener*) adalah platform URL shortener berbasis PHP yang bersifat *self-hosted* dan gratis. Platform ini memungkinkan pembuatan tautan pendek dengan domain kustom, pemantauan statistik penggunaan, serta penambahan fitur melalui sistem plugin. Sebagai proyek open source, YOURLS menjadi solusi andal untuk pengelolaan tautan secara mandiri dan profesional.
+
+---
+
+<details>
+<summary><b>Anggota Kelompok</b></summary>
+
+| Nama                                   | NIM           |
+|---------------------------------------|---------------|
+| <a href="https://github.com/qois51" target="_blank">Qois Firosi</a>            | G6401231031   |
+| <a href="https://github.com/prakoso09" target="_blank">Gilang Agung Prakoso</a> | G6401231039   |
+| <a href="https://github.com/AghnatHs" target="_blank">Aghnat Hasya Sayyidina</a> | G6401231074   |
+| <a href="https://github.com/HusniAbdillah" target="_blank">Husni Abdillah</a>   | G6401231097   |
+| <a href="https://github.com/insanansharyrasul" target="_blank">Insan Anshary Rasul</a> | G6401231132   |
+
+</details>
+
+---
 
 ## Instalasi
 
@@ -161,54 +190,88 @@ https://akupendekkin.my.id/admin/index.php #login dengan username dan password a
 
 Kunjungi https://akupendekkin.my.id/admin/ 
 
-Masukkan password dan username yang sudah ditentukan saat instalasi untuk menggunakannya
+Masukkan password dan username yang sudah ditentukan saat instalasi untuk menggunakannya.
 
 ![](assets/ss1.png)
 
 2. Membuat Link Pendek
 
-Setelah login, akan tampilan seperti pada gambar. Cukup masukkan link yang ingin dipendekkan ke dalam "**Enter the URL**" dan ubah menjadi link yang bebas pada bagian **Custom Short URL** setelah anda yakin, baru klik **Shorten The URL**.
+Setelah login, akan muncul tampilan seperti pada gambar. Cukup masukkan link yang ingin dipendekkan ke dalam "**Enter the URL**" dan ubah menjadi link yang bebas pada bagian **Custom Short URL**. Setelah yakin, klik **Shorten The URL** untuk membuat tautan pendek tersebut.
 
 ![](assets/ss2.png)
 
 3. Mengunjungi Link Pendek
 
-Setelah link berhasil dibuat, link akan bisa langsung dikunjungi dengan format yang ada pada bagian **Short URL**. Cukup kunjungi 
+Setelah link berhasil dibuat, link dapat langsung dikunjungi dengan format yang ada pada bagian **Short URL**. Cukup kunjungi:
 
 ```
 https://akupendekkin.my.id/{short_url_anda}
 ```
 
-Untuk mengunjungi link nya. YOURLS akan langsung *redirect* ke address yang sebenarnya.
+Untuk mengunjungi link-nya. YOURLS akan langsung *redirect* ke address yang sebenarnya.
 
-**Tips Penggunaaan**:
+## Kustomisasi dan Plugin
 
-1. Manfaatkan plugin
+YOURLS mendukung berbagai kustomisasi untuk memperluas fungsionalitasnya, termasuk penggunaan plugin dan API. Berikut adalah panduan untuk memaksimalkan penggunaan YOURLS:
 
-Banyak plugin berguna untuk menambah fungsi YOURLS, misalnya:
+### Plugin Populer
 
-- Plugin analitik lebih mendetail
-- Plugin anti-spam
-- Plugin untuk auto-hash URL
+#### 1. Preview URL Plugin
+Plugin ini memungkinkan pengguna untuk melihat halaman preview sebelum diarahkan ke URL tujuan dengan menambahkan karakter `~` di akhir URL pendek.
 
-Simpan plugin hanya dari sumber tepercaya (resmi atau GitHub YOURLS).
+#### 2. QR Code Plugin
+Plugin ini menambahkan fitur untuk menghasilkan QR code dari URL pendek dengan menambahkan `.qr` di akhir URL.
 
-Cek plugin resmi: https://yourls.org/plugins
+### Cara Install Plugin
 
-2. Gunakan API untuk otomatisasi
+1. Masuk ke Direktori Plugin
+   ```bash
+   cd /var/www/html/user/plugins/
+   ```
 
-YOURLS punya REST API, contohnya:
-```
-curl -d "url=https://contoh.com&keyword=mykeyword&format=simple&signature=APIKEY&action=shorturl" https://linkku.id/yourls-api.php
-```
+2. Buat Folder Plugin
+   ```bash
+   sudo mkdir nama-plugin
+   ```
 
-Cocok untuk integrasi dengan skrip, bot Telegram, form, atau CMS. Gunakan signature (API key) untuk autentikasi agar tidak sembarang orang bisa membuat shortlink.
+3. Masuk ke Folder Plugin
+   ```bash
+   cd nama-plugin
+   ```
 
-3. Kelola link dengan rapi
+4. Buat File Plugin
+   ```bash
+   sudo nano plugin.php
+   ```
 
-- Gunakan format penamaan keyword yang konsisten (misalnya event-2025 atau promo-okt25).
-- Hapus link rusak atau tidak aktif secara berkala.
-- Gunakan kategori/tags lewat plugin jika butuh manajemen lebih lanjut.
+5. Salin Kode Plugin
+    - [plugin.php untuk QR Code Plugin](https://github.com/insanansharyrasul/yourls-kdjk/plugins/qr-code/plugin.php)
+    - [plugin.php untuk Preview URL's Plugin](https://github.com/insanansharyrasul/yourls-kdjk/plugins/preview-urls/plugin.php)
+
+6. Aktivasi Plugin
+   - Login ke admin panel YOURLS
+   - Masuk ke menu **Plugins**
+   - Klik **Activate** pada plugin yang diinginkan
+
+![](assets/ss3.png)
+
+### Tips Kustomisasi
+
+1. **Manfaatkan Plugin**
+   - Gunakan plugin untuk menambah fitur seperti analitik mendetail, anti-spam, atau auto-hash URL.
+   - Pastikan hanya mengunduh plugin dari sumber tepercaya, seperti [YOURLS Plugin Directory](https://yourls.org/plugins).
+
+2. **Gunakan API untuk Otomatisasi**
+   - YOURLS menyediakan REST API untuk integrasi dengan skrip, bot, atau CMS.
+   - Contoh penggunaan API:
+     ```bash
+     curl -d "url=https://contoh.com&keyword=mykeyword&format=simple&signature=APIKEY&action=shorturl" https://linkku.id/yourls-api.php
+     ```
+
+3. **Kelola Link dengan Rapi**
+   - Gunakan format penamaan keyword yang konsisten (misalnya `event-2025` atau `promo-okt25`).
+   - Hapus link rusak atau tidak aktif secara berkala.
+   - Gunakan kategori atau tag melalui plugin jika diperlukan.
 
 ## Pembahasan
 
@@ -276,29 +339,19 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 | **Analytics** | Basic, extensible via plugin | Advanced, built-in |
 | **API Rate Limits** | Unlimited | Terbatas berdasarkan paket |
 
-#### 2. YOURLS vs. TinyURL
-
-| Aspek | YOURLS | TinyURL |
-|-------|--------|---------|
-| **Custom Keywords** | Ya | Tidak |
-| **Analytics** | Tersedia | Tidak tersedia |
-| **Branding** | Domain sendiri | tinyurl.com |
-| **Reliability** | Tergantung hosting sendiri | High uptime guarantee |
-| **Privacy** | Kontrol penuh | Data logging oleh TinyURL |
-
-#### 3. YOURLS vs. IPB.Link
+#### 2. YOURLS vs. IPB.Link
 
 | Aspek | YOURLS | IPB.Link |
 |-------|--------|----------|
 | **Aksesibilitas User** | Admin only | Semua civitas IPB |
-| **User Management** | Single admin | Multi-user dengan approval |
+| **User Management** | Single admin | Multi-user |
 | **Keamanan** | Admin-controlled | Approval system + moderation |
 | **Source Code** | Open source | Closed source (proprietary) |
 | **Fleksibilitas** | Terbatas pada admin | Lebih inklusif untuk end-user |
 | **Setup** | Manual install & config | Siap pakai |
-| **Kustomisasi** | Tinggi (plugin ecosystem) | Terbatas sesuai kebijakan institusi |
+| **Kustomisasi** | Tinggi (plugin ecosystem) | Terbatas oleh IT team |
 | **Fitur Khusus** | Plugin extensibility | Link list + approval workflow |
-| **Link Expiry** | Tidak ada (permanent) | Mungkin ada (tergantung kebijakan) |
+| **Link Expiry** | Tidak ada (permanent) | Ada (dapat diatur) |
 | **Maintenance** | Self-managed | Managed by IT team |
 | **Biaya** | Hosting + domain | Gratis untuk civitas |
 | **Transparansi** | Full (open source) | Limited (closed source) |
@@ -328,6 +381,6 @@ Dalam penerapan di lingkungan enterprise, hybrid approach bisa menjadi pilihan y
 1. **YOURLS Official Documentation** - https://yourls.org/
 2. **YOURLS GitHub Repository** - https://github.com/YOURLS/YOURLS
 3. **YOURLS Plugin Directory** - https://yourls.org/docs/development/plugins
-4. **Bitly API Documentation** - https://dev.bitly.com/
-5. **TinyURL** - https://tinyurl.com/
+4. **LinuxStans: How to Install YOURLS** - https://linuxstans.com/how-to-install-yourls/
+5. **Bitly API Documentation** - https://dev.bitly.com/
 6. **IPB.Link** - https://ipb.link/
