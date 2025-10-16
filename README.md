@@ -212,14 +212,122 @@ Cocok untuk integrasi dengan skrip, bot Telegram, form, atau CMS. Gunakan signat
 
 ## Pembahasan
 
-## Kelebihan [Nama Aplikasi]
+Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami menilai beberapa aspek penting dari penggunaan YOURLS sebagai solusi URL shortener yang di-hosting sendiri.
 
-## Kekurangan [Nama Aplikasi]
+### Kelebihan YOURLS
 
-## Perbandingan [Nama Aplikasi] dengan Aplikasi Web Sejenis
+**1. Keamanan Terkontrol**
+- Hanya admin yang dapat membuat short URL, mengurangi risiko spam dan penyalahgunaan
+- Kontrol penuh atas siapa yang dapat mengakses fitur shortening
+- Tidak ada registrasi publik yang dapat disalahgunakan
+
+**2. Open Source & Kedaulatan Data**
+- Kode sumber terbuka, dapat diaudit dan dimodifikasi sesuai kebutuhan
+- Semua data tersimpan di server sendiri tanpa ketergantungan pihak ketiga
+- Komunitas aktif untuk pengembangan dan support
+
+**3. Instalasi yang Relatif Mudah**
+- Dokumentasi instalasi yang jelas dan straightforward
+- Requirement server yang standar (LAMP/LEMP stack)
+- Proses setup dapat diselesaikan dalam waktu singkat
+
+**4. Analitik Terintegrasi**
+- Dashboard statistik real-time untuk tracking klik
+- Data geografis dan referrer analysis
+- Export data untuk analisis lanjutan
+
+**5. Ekosistem Plugin yang Kaya**
+- Berbagai plugin untuk extend functionality
+- Mudah dikustomisasi dan dikembangkan
+- API yang fleksibel untuk integrasi
+
+### Kekurangan YOURLS
+
+**1. Keterbatasan Fleksibilitas Pengguna**
+- Hanya admin yang dapat membuat short URL (tidak ada user management)
+- Tidak ada sistem role-based access control by default
+- Kurang cocok untuk skenario collaborative atau public shortening
+
+**2. Ketiadaan Fitur Expiry**
+- Short URL bersifat permanent tanpa auto-expiry
+- Tidak ada scheduling untuk deaktivasi link otomatis
+- Memerlukan manual cleanup untuk link yang tidak digunakan
+
+**3. Kompleksitas Teknis**
+- Memerlukan pengetahuan server administration
+- Maintenance dan security update menjadi tanggung jawab pengelola
+- Troubleshooting membutuhkan skill teknis
+
+**4. Ketergantungan Infrastructure**
+- Membutuhkan dedicated server atau VPS
+- Biaya hosting dan maintenance berkelanjutan
+- Single point of failure jika tidak ada redundancy
+
+### Perbandingan YOURLS dengan Aplikasi Web Sejenis
+
+#### 1. YOURLS vs. Bitly
+
+| Aspek | YOURLS | Bitly |
+|-------|--------|-------|
+| **Biaya** | Gratis (biaya hosting sendiri) | Freemium, akses gratis sangat terbatas |
+| **Kustomisasi Domain** | Ya, unlimited | Terbatas pada paket berbayar |
+| **Kontrol Data** | Penuh | Terbatas, data di server Bitly |
+| **Ease of Use** | Butuh setup teknis | Plug-and-play |
+| **Analytics** | Basic, extensible via plugin | Advanced, built-in |
+| **API Rate Limits** | Unlimited | Terbatas berdasarkan paket |
+
+#### 2. YOURLS vs. TinyURL
+
+| Aspek | YOURLS | TinyURL |
+|-------|--------|---------|
+| **Custom Keywords** | Ya | Tidak |
+| **Analytics** | Tersedia | Tidak tersedia |
+| **Branding** | Domain sendiri | tinyurl.com |
+| **Reliability** | Tergantung hosting sendiri | High uptime guarantee |
+| **Privacy** | Kontrol penuh | Data logging oleh TinyURL |
+
+#### 3. YOURLS vs. IPB.Link
+
+| Aspek | YOURLS | IPB.Link |
+|-------|--------|----------|
+| **Aksesibilitas User** | Admin only | Semua civitas IPB |
+| **User Management** | Single admin | Multi-user dengan approval |
+| **Keamanan** | Admin-controlled | Approval system + moderation |
+| **Source Code** | Open source | Closed source (proprietary) |
+| **Fleksibilitas** | Terbatas pada admin | Lebih inklusif untuk end-user |
+| **Setup** | Manual install & config | Siap pakai |
+| **Kustomisasi** | Tinggi (plugin ecosystem) | Terbatas sesuai kebijakan institusi |
+| **Fitur Khusus** | Plugin extensibility | Link list + approval workflow |
+| **Link Expiry** | Tidak ada (permanent) | Mungkin ada (tergantung kebijakan) |
+| **Maintenance** | Self-managed | Managed by IT team |
+| **Biaya** | Hosting + domain | Gratis untuk civitas |
+| **Transparansi** | Full (open source) | Limited (closed source) |
 
 ## Kesimpulan
 
+Pemilihan antara YOURLS dan solusi sejenis sangat bergantung pada prioritas organisasi:
+
+**Pilih YOURLS jika:**
+- Mengutamakan kontrol keamanan yang ketat (admin-only access)
+- Membutuhkan transparansi kode (open source)
+- Memiliki resources untuk technical maintenance
+- Ingin fleksibilitas customization tanpa batas
+- Tidak memerlukan collaborative shortening
+
+**Pilih IPB.Link atau solusi serupa jika:**
+- Mengutamakan kemudahan akses untuk banyak user
+- Membutuhkan sistem approval dan moderation built-in
+- Tidak memiliki dedicated IT resources
+- Mengutamakan ready-to-use solution
+- Memerlukan fitur collaborative yang lebih advanced
+
+Dalam penerapan di lingkungan enterprise, hybrid approach bisa menjadi pilihan yang tepat. YOURLS dapat digunakan untuk kebutuhan internal admin, sementara layanan managed service dipakai untuk kebutuhan publik atau kolaboratif.
+
 ## Referensi
 
-[Daftar referensi]
+1. **YOURLS Official Documentation** - https://yourls.org/
+2. **YOURLS GitHub Repository** - https://github.com/YOURLS/YOURLS
+3. **YOURLS Plugin Directory** - https://yourls.org/plugins
+4. **Bitly API Documentation** - https://dev.bitly.com/
+5. **TinyURL** - https://tinyurl.com/
+6. **IPB.Link** - https://ipb.link/
