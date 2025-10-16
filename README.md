@@ -217,10 +217,10 @@ YOURLS mendukung berbagai kustomisasi untuk memperluas fungsionalitasnya, termas
 ### Plugin Populer
 
 #### 1. Preview URL Plugin
-Plugin ini memungkinkan pengguna untuk melihat halaman preview sebelum diarahkan ke URL tujuan dengan menambahkan karakter `~` di akhir URL pendek.
+Plugin ini memungkinkan pengguna untuk melihat halaman preview sebelum diarahkan ke URL tujuan dengan menambahkan karakter `~` di akhir URL.
 
 #### 2. QR Code Plugin
-Plugin ini menambahkan fitur untuk menghasilkan QR code dari URL pendek dengan menambahkan `.qr` di akhir URL.
+Plugin ini menambahkan fitur untuk menghasilkan QR code dari short URL dengan menambahkan `.qr` di akhir URL.
 
 ### Cara Install Plugin
 
@@ -298,6 +298,7 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 - Dashboard statistik real-time untuk tracking klik
 - Data geografis dan referrer analysis
 - Export data untuk analisis lanjutan
+![](assets/ss4.png)
 
 **5. Ekosistem Plugin yang Kaya**
 - Berbagai plugin untuk extend functionality
@@ -382,5 +383,5 @@ Dalam penerapan di lingkungan enterprise, hybrid approach bisa menjadi pilihan y
 2. **YOURLS GitHub Repository** - https://github.com/YOURLS/YOURLS
 3. **YOURLS Plugin Directory** - https://yourls.org/docs/development/plugins
 4. **LinuxStans: How to Install YOURLS** - https://linuxstans.com/how-to-install-yourls/
-5. **Bitly API Documentation** - https://dev.bitly.com/
+5. **Bitly** - https://bitly.com/
 6. **IPB.Link** - https://ipb.link/
