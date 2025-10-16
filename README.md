@@ -245,8 +245,8 @@ Plugin ini menambahkan fitur untuk menghasilkan QR code dari short URL dengan me
    ```
 
 5. Salin Kode Plugin
-    - [plugin.php untuk QR Code Plugin](https://github.com/insanansharyrasul/yourls-kdjk/plugins/qr-code/plugin.php)
-    - [plugin.php untuk Preview URL's Plugin](https://github.com/insanansharyrasul/yourls-kdjk/plugins/preview-urls/plugin.php)
+    - [plugin.php untuk QR Code Plugin](https://github.com/insanansharyrasul/yourls-kdjk/blob/main/plugins/qr-code/plugin.php)
+    - [plugin.php untuk Preview URL's Plugin](https://github.com/insanansharyrasul/yourls-kdjk/blob/main/plugins/preview-urls/plugin.php)
 
 6. Aktivasi Plugin
    - Login ke admin panel YOURLS
