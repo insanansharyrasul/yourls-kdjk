@@ -280,9 +280,10 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 ### Kelebihan YOURLS
 
 **1. Keamanan Terkontrol**
-- Hanya admin yang dapat membuat short URL, mengurangi risiko spam dan penyalahgunaan
+- Hanya admin yang dapat membuat short URL, mengurangi risiko spam dan penyalahgunaan [jika setting admin-only]
 - Kontrol penuh atas siapa yang dapat mengakses fitur shortening
 - Tidak ada registrasi publik yang dapat disalahgunakan
+- Cocok untuk penggunaan internal di perusahaan dengan admin yang mengatur semua short-url
 
 **2. Open Source & Kedaulatan Data**
 - Kode sumber terbuka, dapat diaudit dan dimodifikasi sesuai kebutuhan
@@ -308,7 +309,7 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 ### Kekurangan YOURLS
 
 **1. Keterbatasan Fleksibilitas Pengguna**
-- Hanya admin yang dapat membuat short URL (tidak ada user management)
+- Hanya admin yang dapat membuat short URL (tidak ada user management) [jika setting admin-only]
 - Tidak ada sistem role-based access control by default
 - Kurang cocok untuk skenario collaborative atau public shortening
 
@@ -317,15 +318,8 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 - Tidak ada scheduling untuk deaktivasi link otomatis
 - Memerlukan manual cleanup untuk link yang tidak digunakan
 
-**3. Kompleksitas Teknis**
-- Memerlukan pengetahuan server administration
-- Maintenance dan security update menjadi tanggung jawab pengelola
-- Troubleshooting membutuhkan skill teknis
-
-**4. Ketergantungan Infrastructure**
-- Membutuhkan dedicated server atau VPS
-- Biaya hosting dan maintenance berkelanjutan
-- Single point of failure jika tidak ada redundancy
+**3. Fleksibel namun tidak aman**
+- jika define( 'YOURLS_PRIVATE', false) (setting public); page admin jadi tidak perlu login, fleksibel tapi dari sisi cybersec sangat tidak aman karena siapapun dapat mengakses admin page dan menambahkan/menghapus/mengedit URL milik orang lain
 
 ### Perbandingan YOURLS dengan Aplikasi Web Sejenis
 
