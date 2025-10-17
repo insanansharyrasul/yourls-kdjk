@@ -259,7 +259,7 @@ Plugin ini menambahkan fitur untuk menghasilkan QR code dari short URL dengan me
 
 1. **Manfaatkan Plugin**
    - Gunakan plugin untuk menambah fitur seperti analitik mendetail, anti-spam, atau auto-hash URL.
-   - Pastikan hanya mengunduh plugin dari sumber tepercaya, seperti [YOURLS Plugin Directory](https://yourls.org/plugins).
+   - Pastikan hanya mengunduh plugin dari sumber tepercaya, seperti [YOURLS Plugin Directory](https://yourls.org/docs/development/plugins).
 
 2. **Gunakan API untuk Otomatisasi**
    - YOURLS menyediakan REST API untuk integrasi dengan skrip, bot, atau CMS.
@@ -300,6 +300,7 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 - Data geografis dan referrer analysis
 - Export data untuk analisis lanjutan
 ![](assets/ss4.png)
+![](assets/ss5.png)
 
 **5. Ekosistem Plugin yang Kaya**
 - Berbagai plugin untuk extend functionality
@@ -318,8 +319,8 @@ Setelah proses instalasi dan pengujian langsung di server Azure Ubuntu, kami men
 - Tidak ada scheduling untuk deaktivasi link otomatis
 - Memerlukan manual cleanup untuk link yang tidak digunakan
 
-**3. Fleksibel namun tidak aman**
-- jika define( 'YOURLS_PRIVATE', false) (setting public); page admin jadi tidak perlu login, fleksibel tapi dari sisi cybersec sangat tidak aman karena siapapun dapat mengakses admin page dan menambahkan/menghapus/mengedit URL milik orang lain
+**3. Fleksibel, tetapi Beresiko**
+- Jika define( 'YOURLS_PRIVATE', false); (setting public), page admin dapat diakses tanpa login. Fleksibel, tetapi dari sisi cybersec sangat tidak aman karena siapapun dapat mengakses admin page dan menambahkan, menghapus, atau mengedit URL milik orang lain
 
 ### Perbandingan YOURLS dengan Aplikasi Web Sejenis
 
@@ -376,6 +377,7 @@ Dalam penerapan di lingkungan enterprise, hybrid approach bisa menjadi pilihan y
 1. **YOURLS Official Documentation** - https://yourls.org/
 2. **YOURLS GitHub Repository** - https://github.com/YOURLS/YOURLS
 3. **YOURLS Plugin Directory** - https://yourls.org/docs/development/plugins
-4. **LinuxStans: How to Install YOURLS** - https://linuxstans.com/how-to-install-yourls/
-5. **Bitly** - https://bitly.com/
-6. **IPB.Link** - https://ipb.link/
+4. **YOURLS Awesome** - https://github.com/YOURLS/awesome
+5. **LinuxStans: How to Install YOURLS** - https://linuxstans.com/how-to-install-yourls/
+6. **Bitly** - https://bitly.com/
+7. **IPB.Link** - https://ipb.link/
